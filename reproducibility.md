@@ -2,14 +2,15 @@
 
 ## Scope
 
-This review ZIP is the bounded audit package for the integrated `paper7` line.
-It audits the released matched-run output surface and preserved nested
-source members; here, exact replication names that fixed released output surface
-rather than a live rerun handoff. It is not a full repo clone and it is not a live-rerun handoff. The shipped
-root-level guides are only `README.md` and this file; the shipped operational
-surface is the current manuscript package plus the bundled claim-trace artifacts
-under `results/`, `repro/`, `scripts/`, and carried-forward `nrr-boundary/`
-stats.
+This review ZIP is the bounded audit package for the `NRR-Patterns` line.
+Released filenames inside the package still use the integrated `paper7` stem
+for continuity. It audits the released matched-run output surface and preserved
+nested source members, fixing the released audit surface rather than acting as
+a live rerun handoff. It is not a full repo clone and it is not a live-rerun
+handoff. The shipped root-level guides are only `README.md` and this file; the
+shipped operational surface is the current manuscript package plus the bundled
+claim-trace artifacts under `results/`, `repro/`, `scripts/`, and
+carried-forward `nrr-boundary/` stats.
 
 The package uses two evidence shapes:
 - top-level shipped artifacts that exist directly in the extracted ZIP
@@ -80,9 +81,13 @@ The package uses two evidence shapes:
 
 ## Shipped commands
 
+- Scripts reference:
+  - `./scripts/README.md`
 - Build the current manuscript to a temp output dir:
   - `./scripts/build_current_manuscript.sh`
   - default output: `/tmp/nrr-patterns_current_build/paper7_integrated_manuscript_v0_29_2026-04-01.pdf`
+- Verify the active review surface:
+  - `./scripts/verify_active_review_surface.sh`
 - Verify the current review-package checksum manifest:
   - `./scripts/verify_current_package.sh`
 - Verify the broader audit release surface:
@@ -98,10 +103,12 @@ The package uses two evidence shapes:
 
 ```bash
 cd <repo-root>
+./scripts/verify_active_review_surface.sh
 ./scripts/verify_current_package.sh
 ```
 
 This checks:
+- the active review surface under `manuscript/current/`
 - the current manuscript checksum manifest
 - the review-package checksum manifest
 - the broader audit-surface checksum manifest

@@ -1,7 +1,14 @@
 # NRR-Patterns: Delayed-Commitment Patterns in Stateful LLM Systems
 
-This repository is the current public authority for the integrated `paper7` line.
-The current integrated paper compares delayed-commitment patterns under a split comparison contract with a fixed matched-run comparison headline on two fixed matched `t=0.0` runs and a separated robustness member, then carries forward selected provider-sensitive boundary reporting to keep the resulting pattern map honest under explicit conditions. The shipped review ZIP audits that released output surface rather than serving as an independent rerun workspace.
+This repository is the current public authority for the `NRR-Patterns` line.
+The released manuscript and package artifacts in this bounded audit surface
+still retain the integrated `paper7` stem for continuity. The current
+NRR-Patterns manuscript compares delayed-commitment patterns under a split
+comparison contract with a fixed matched-run comparison headline on two fixed
+matched `t=0.0` runs and a separated robustness member, then carries forward
+selected provider-sensitive boundary reporting to keep the resulting pattern
+map honest under explicit conditions. The shipped review ZIP audits that
+released output surface rather than serving as an independent rerun workspace.
 
 Historical note:
 - the older `nrr-principles` repository remains as historical/source continuity for the pre-integration and local integration history
@@ -76,7 +83,9 @@ The current review ZIP has one active comparison contract: `repro/paper7_split_c
   - `./scripts/aggregate_comparison_r2.py`
   - `./scripts/build_paper7_integrated_comparison_headline_summary.py`
   - `./scripts/build_paper7_provider_separated_stability_summary.py`
+  - `./scripts/README.md`
   - `./scripts/build_current_manuscript.sh`
+  - `./scripts/verify_active_review_surface.sh`
   - `./scripts/verify_current_package.sh`
   - `./scripts/verify_provider_separated_summary.py`
   - `./scripts/verify_audit_surface.py repro/paper7_integrated_audit_surface_sha256_v19_2026-04-01.txt`
@@ -92,12 +101,12 @@ The current review ZIP has one active comparison contract: `repro/paper7_split_c
 ## Mainline Read
 
 - Current cross-series mainline for this repository:
-  - integrated `paper7`
+  - `NRR-Patterns` (released artifact stem: integrated `paper7`)
 - Historical/source surfaces kept here but not current mainline:
   - standalone `NRR-Principles`
-  - carried-forward `Boundary` source references consumed by integrated `paper7`
+  - carried-forward `Boundary` source references consumed by the current `NRR-Patterns` line
 - Standalone sibling repository status:
-  - `nrr-boundary` remains a historical/source support surface and should not be read as a separate live mainline while integrated `paper7` is the active line
+  - `nrr-boundary` remains a historical/source support surface and should not be read as a separate live mainline while `NRR-Patterns` is the active line
 
 ## Shipped review-zip structure
 
@@ -129,8 +138,10 @@ nrr-patterns-review-zip/
     |-- aggregate_comparison_r2.py
     |-- build_paper7_integrated_comparison_headline_summary.py
     |-- build_paper7_provider_separated_stability_summary.py
+    |-- README.md
     |-- build_current_manuscript.sh
     |-- verify_audit_surface.py
+    |-- verify_active_review_surface.sh
     |-- verify_current_package.sh
     |-- verify_provider_separated_summary.py
     `-- verify_zip_member_refs.py

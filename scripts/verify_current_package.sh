@@ -3,18 +3,11 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 CURRENT_DIR="$ROOT/manuscript/current"
-INTEGRATED_MANIFEST="$CURRENT_DIR/paper7_integrated_checksums_sha256.txt"
-LEGACY_MANIFEST="$CURRENT_DIR/checksums_sha256.txt"
 REPRO_DIR="$ROOT/repro"
 REPRO_MANIFEST="$REPRO_DIR/paper7_integrated_repro_checksums_sha256.txt"
 AUDIT_MANIFEST="$(find "$REPRO_DIR" -maxdepth 1 -type f -name 'paper7_integrated_audit_surface_sha256_v*.txt' | sort -V | tail -n 1)"
 
-cd "$CURRENT_DIR"
-if [ -f "$INTEGRATED_MANIFEST" ]; then
-  shasum -a 256 -c "$(basename "$INTEGRATED_MANIFEST")"
-else
-  shasum -a 256 -c "$(basename "$LEGACY_MANIFEST")"
-fi
+"$ROOT/scripts/verify_active_review_surface.sh"
 
 cd "$REPRO_DIR"
 if [ -f "$REPRO_MANIFEST" ]; then
