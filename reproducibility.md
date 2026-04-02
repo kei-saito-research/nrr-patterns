@@ -20,15 +20,15 @@ The package uses two evidence shapes:
 ## Current review package
 
 - Mainline integrated TeX:
-  - `manuscript/current/paper7_integrated_manuscript_v0_31_2026-04-03.tex`
+  - `manuscript/current/paper7_integrated_manuscript_v0_32_2026-04-03.tex`
 - Current integrated PDF snapshot:
-  - `manuscript/current/paper7_integrated_manuscript_v0_31_2026-04-03.pdf`
+  - `manuscript/current/paper7_integrated_manuscript_v0_32_2026-04-03.pdf`
 - Current integrated manuscript figures:
-  - `manuscript/current/fig_patterns_weighted_3runs.png`
-  - `manuscript/current/fig_r2_comparison_weighted.png`
-  - `manuscript/current/paper7_stageb_sign_flip_boundaries.png`
+  - `manuscript/figures/fig_patterns_weighted_3runs.png`
+  - `manuscript/figures/fig_r2_comparison_weighted.png`
+  - `manuscript/figures/paper7_stageb_sign_flip_boundaries.png`
 - Integrated checksum manifest:
-  - `manuscript/current/paper7_integrated_checksums_sha256.txt`
+  - `manuscript/checksums_active_review_surface_sha256.txt`
 - Audit-surface anchors:
   - `repro/paper7_integrated_audit_surface_sha256_v19_2026-04-01.txt`
   - `repro/paper7_integrated_repro_checksums_sha256.txt`
@@ -85,7 +85,7 @@ The package uses two evidence shapes:
   - `./scripts/README.md`
 - Build the current manuscript to a temp output dir:
   - `./scripts/build_current_manuscript.sh`
-  - default output: `/tmp/nrr-patterns_current_build/paper7_integrated_manuscript_v0_31_2026-04-03.pdf`
+  - default output: `/tmp/nrr-patterns_current_build/paper7_integrated_manuscript_v0_32_2026-04-03.pdf`
 - Verify the active review surface:
   - `./scripts/verify_active_review_surface.sh`
 - Verify the current review-package checksum manifest:
@@ -108,7 +108,8 @@ cd <repo-root>
 ```
 
 This checks:
-- the active review surface under `manuscript/current/`
+- the pair-only active review surface under `manuscript/current/`
+- the manuscript-facing figure assets under `manuscript/figures/`
 - the current manuscript checksum manifest
 - the review-package checksum manifest
 - the broader audit-surface checksum manifest

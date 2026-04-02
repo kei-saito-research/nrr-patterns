@@ -12,7 +12,7 @@ without renaming any shipped artifact stems.
 - `build_current_manuscript.sh`
   - builds the current manuscript in `manuscript/current/` to a temp output directory
 - `verify_active_review_surface.sh`
-  - verifies the fixed `manuscript/current/` review surface and checks `paper7_integrated_checksums_sha256.txt`
+  - verifies the pair-only `manuscript/current/` review surface, the figure assets under `manuscript/figures/`, and `manuscript/checksums_active_review_surface_sha256.txt`
 - `verify_current_package.sh`
   - verifies the active review surface first, then checks the shipped audit and reproducibility manifests
 

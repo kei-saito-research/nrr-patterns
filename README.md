@@ -34,20 +34,20 @@ For the cross-paper map and current series links, start here:
 ## Current manuscript snapshot
 
 - Mainline integrated manuscript source:
-  - `manuscript/current/paper7_integrated_manuscript_v0_31_2026-04-03.tex`
+  - `manuscript/current/paper7_integrated_manuscript_v0_32_2026-04-03.tex`
 - Mainline integrated manuscript PDF:
-  - `manuscript/current/paper7_integrated_manuscript_v0_31_2026-04-03.pdf`
+  - `manuscript/current/paper7_integrated_manuscript_v0_32_2026-04-03.pdf`
 - Mainline integrated checksum manifest:
-  - `manuscript/current/paper7_integrated_checksums_sha256.txt`
+  - `manuscript/checksums_active_review_surface_sha256.txt`
 - Mainline integrated audit-surface anchors:
   - `repro/paper7_integrated_audit_surface_sha256_v19_2026-04-01.txt`
   - `repro/paper7_integrated_package_map_v19_2026-04-01.md`
   - `repro/paper7_split_comparison_contract_v12_2026-04-01.md`
   - `repro/paper7_stageb_selection_rule_v1_2026-03-31.md`
 - Mainline integrated figures used by manuscript:
-  - `manuscript/current/fig_patterns_weighted_3runs.png`
-  - `manuscript/current/fig_r2_comparison_weighted.png`
-  - `manuscript/current/paper7_stageb_sign_flip_boundaries.png`
+  - `manuscript/figures/fig_patterns_weighted_3runs.png`
+  - `manuscript/figures/fig_r2_comparison_weighted.png`
+  - `manuscript/figures/paper7_stageb_sign_flip_boundaries.png`
 - Current review ZIP audits the released matched-run output surface and nested source members rather than providing an independent rerun workspace.
 - Shipped root-level docs inside that ZIP are only `README.md` and `reproducibility.md`.
 
@@ -115,7 +115,8 @@ nrr-patterns-review-zip/
 |-- README.md
 |-- reproducibility.md
 |-- manuscript/
-|   `-- current/
+|   |-- current/
+|   `-- figures/
 |-- nrr-boundary/
 |   `-- stats/stageb_all/
 |-- results/

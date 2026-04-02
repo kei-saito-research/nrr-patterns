@@ -3,7 +3,8 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 CURRENT_DIR="$ROOT/manuscript/current"
-MANIFEST="$CURRENT_DIR/paper7_integrated_checksums_sha256.txt"
+FIGURES_DIR="$ROOT/manuscript/figures"
+MANIFEST="$ROOT/manuscript/checksums_active_review_surface_sha256.txt"
 
 current_files=()
 while IFS= read -r file; do
@@ -23,20 +24,20 @@ done < <(find "$CURRENT_DIR" -maxdepth 1 -type f -name 'paper7_integrated_manusc
 png_files=()
 while IFS= read -r file; do
   png_files+=("$file")
-done < <(find "$CURRENT_DIR" -maxdepth 1 -type f -name '*.png' | LC_ALL=C sort)
+done < <(find "$FIGURES_DIR" -maxdepth 1 -type f -name '*.png' | LC_ALL=C sort)
 
 if [ ! -f "$MANIFEST" ]; then
   echo "Missing active review surface manifest: $MANIFEST" >&2
   exit 1
 fi
 
-if [ "${#current_files[@]}" -ne 6 ]; then
-  echo "Active review surface must contain exactly 6 files in $CURRENT_DIR" >&2
+if [ "${#current_files[@]}" -ne 2 ]; then
+  echo "Active review surface must contain exactly 2 files in $CURRENT_DIR" >&2
   exit 1
 fi
 
 if [ "${#tex_files[@]}" -ne 1 ] || [ "${#pdf_files[@]}" -ne 1 ] || [ "${#png_files[@]}" -ne 3 ]; then
-  echo "Active review surface must contain exactly one manuscript .tex, one manuscript .pdf, and three figure .png files in $CURRENT_DIR" >&2
+  echo "Active review surface must contain exactly one manuscript .tex and .pdf in $CURRENT_DIR, plus three figure .png files in $FIGURES_DIR" >&2
   exit 1
 fi
 
@@ -47,5 +48,5 @@ if [ "$tex_base" != "$pdf_base" ]; then
   exit 1
 fi
 
-cd "$CURRENT_DIR"
-shasum -a 256 -c "$(basename "$MANIFEST")"
+cd "$ROOT"
+shasum -a 256 -c "manuscript/$(basename "$MANIFEST")"
