@@ -20,11 +20,11 @@ The package uses two evidence shapes:
 ## Current review package
 
 - Mainline integrated TeX:
-  - `manuscript/current/paper7_integrated_manuscript_v0_29_2026-04-01.tex`
+  - `manuscript/current/paper7_integrated_manuscript_v0_31_2026-04-03.tex`
 - Current integrated PDF snapshot:
-  - `manuscript/current/paper7_integrated_manuscript_v0_29_2026-04-01.pdf`
+  - `manuscript/current/paper7_integrated_manuscript_v0_31_2026-04-03.pdf`
 - Current integrated manuscript figures:
-  - `manuscript/current/fig_principles_weighted_3runs.png`
+  - `manuscript/current/fig_patterns_weighted_3runs.png`
   - `manuscript/current/fig_r2_comparison_weighted.png`
   - `manuscript/current/paper7_stageb_sign_flip_boundaries.png`
 - Integrated checksum manifest:
@@ -85,7 +85,7 @@ The package uses two evidence shapes:
   - `./scripts/README.md`
 - Build the current manuscript to a temp output dir:
   - `./scripts/build_current_manuscript.sh`
-  - default output: `/tmp/nrr-patterns_current_build/paper7_integrated_manuscript_v0_29_2026-04-01.pdf`
+  - default output: `/tmp/nrr-patterns_current_build/paper7_integrated_manuscript_v0_31_2026-04-03.pdf`
 - Verify the active review surface:
   - `./scripts/verify_active_review_surface.sh`
 - Verify the current review-package checksum manifest:
