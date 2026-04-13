@@ -13,18 +13,18 @@ ANALYSIS_DIR = RESULTS_DIR / "analysis"
 RUNS = [
     (
         "stage1_main",
-        RESULTS_DIR / "paper7_results_allproviders_clean.zip",
-        "results/analysis/paper7_prod_{provider}_clean_t00_paired_deltas.csv",
+        RESULTS_DIR / "nrr_patterns_results_allproviders_clean.zip",
+        "results/analysis/nrr_patterns_prod_{provider}_clean_t00_paired_deltas.csv",
     ),
     (
         "stage1_rep2",
-        RESULTS_DIR / "paper7_results_stage1_t00_rep2.zip",
-        "results/analysis/paper7_prod_{provider}_clean_t00_paired_deltas.csv",
+        RESULTS_DIR / "nrr_patterns_results_stage1_t00_rep2.zip",
+        "results/analysis/nrr_patterns_prod_{provider}_clean_t00_paired_deltas.csv",
     ),
     (
         "stage2_t03",
-        RESULTS_DIR / "paper7_results_stage2_t03.zip",
-        "results/analysis/paper7_prod_{provider}_clean_t03_paired_deltas.csv",
+        RESULTS_DIR / "nrr_patterns_results_stage2_t03.zip",
+        "results/analysis/nrr_patterns_prod_{provider}_clean_t03_paired_deltas.csv",
     ),
 ]
 
@@ -38,7 +38,7 @@ PATTERN_ORDER = [
 
 PROVIDERS = ["anthropic", "gemini", "openai"]
 
-OUTPUT_PATH = ANALYSIS_DIR / "paper7_provider_separated_stability_summary_v2_2026-04-01.csv"
+OUTPUT_PATH = ANALYSIS_DIR / "nrr_patterns_provider_separated_stability_summary_v3_2026-04-12.csv"
 
 
 def read_csv_from_zip(zip_path: Path, member_path: str) -> list[dict[str, str]]:

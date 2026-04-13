@@ -1,64 +1,64 @@
-# Integrated paper7 package map v19
+# NRR-Patterns package map v20
 
 ## Purpose
 
-This file freezes the reviewer-facing source-of-truth names for integrated `paper7`
+This file freezes the reviewer-facing source-of-truth names for NRR-Patterns
 after the current provider-separated comparison refresh. The current release
-surface keeps one integrated comparison headline summary in-package while also
+surface keeps one comparison headline summary in-package while also
 shipping a compact provider-separated stability summary plus the canonical
 upstream source members for drill-down inside the same audit surface.
 
 ## Canonical evidence roles
 
 - Main comparison spine
-  - manifest: `repro/paper7_integrated_comparison_claims_manifest_v6_2026-04-01.csv`
+  - manifest: `repro/nrr_patterns_comparison_claims_manifest_v7_2026-04-12.csv`
   - status: active
   - role: fixed paired comparison over the five delayed-commitment patterns, with explicit unequal support volume across patterns
-  - reviewer-facing summary: `results/analysis/paper7_integrated_comparison_headline_summary_v2_2026-03-31.csv`
-  - reviewer-facing provider-separated summary: `results/analysis/paper7_provider_separated_stability_summary_v2_2026-04-01.csv`
+  - reviewer-facing summary: `results/analysis/nrr_patterns_comparison_headline_summary_v3_2026-04-12.csv`
+  - reviewer-facing provider-separated summary: `results/analysis/nrr_patterns_provider_separated_stability_summary_v3_2026-04-12.csv`
 - Paper-local comparison contract
-  - spec: `repro/paper7_split_comparison_contract_v12_2026-04-01.md`
+  - spec: `repro/nrr_patterns_split_comparison_contract_v13_2026-04-12.md`
   - status: active
-  - role: freezes the integrated paper's exact-replication headline, provider-separated stability read, separated robustness member, fairness constraints, run members, and support-volume interpretation
+  - role: freezes the NRR-Patterns's exact-replication headline, provider-separated stability read, separated robustness member, fairness constraints, run members, and support-volume interpretation
 - Historical comparison contract
-  - spec: `repro/paper7_fixed_paired_protocol_spec_v7_2026-04-01.md`
+  - spec: `repro/nrr_patterns_fixed_paired_protocol_spec_v8_2026-04-12.md`
   - status: shipped as a superseded provenance note only
   - role: preserves the pre-split contract transition story in a non-active form, but it is not part of the active reviewer-facing source-of-truth path
 - Compression control
-  - manifest: `repro/paper7_integrated_comparison_claims_manifest_v6_2026-04-01.csv`
+  - manifest: `repro/nrr_patterns_comparison_claims_manifest_v7_2026-04-12.csv`
   - status: active
   - role: compact main-text control against a generic prompt-shortening explanation for the retained three-pattern subset
 - Boundary honesty layer
-  - manifest: `repro/paper7_integrated_boundary_claims_manifest_v1_2026-03-29.csv`
+  - manifest: `repro/nrr_patterns_boundary_claims_manifest_v2_2026-04-12.csv`
   - status: active
   - role: selected Stage B carry-forward for provider-sensitive weakening, sign-flip, and non-effective reporting
 - Paper-local Stage B selection rule
-  - spec: `repro/paper7_stageb_selection_rule_v1_2026-03-31.md`
+  - spec: `repro/nrr_patterns_stageb_selection_rule_v2_2026-04-12.md`
   - status: active
-  - role: freezes why the retained Stage B artifacts enter the integrated manuscript while broader boundary elaboration stays package-first
+  - role: freezes why the retained Stage B artifacts enter the current NRR-Patterns manuscript while broader boundary elaboration stays package-first
 - Appendix/package-first surfaces
-  - manifest: `repro/paper7_integrated_comparison_claims_manifest_v6_2026-04-01.csv`
+  - manifest: `repro/nrr_patterns_comparison_claims_manifest_v7_2026-04-12.csv`
   - status: demoted by default
   - role: no-position robustness and other non-mainline surfaces
 
 ## Reading order
 
-1. Read the integrated manuscript.
-2. Read the integrated comparison headline summary, then the provider-separated stability summary, then the split comparison contract and the comparison claims manifest for source-level drill-down and the retained three-pattern compression control.
+1. Read the current NRR-Patterns manuscript.
+2. Read the comparison headline summary, then the provider-separated stability summary, then the split comparison contract and the comparison claims manifest for source-level drill-down and the retained three-pattern compression control.
 3. Read the Stage B selection rule, then the boundary claims manifest for selected Stage B honesty carry-forward.
-4. Use `repro/paper7_integrated_audit_surface_sha256_v19_2026-04-01.txt` together with `scripts/verify_audit_surface.py` to verify the shipped audit surface.
+4. Use `repro/nrr_patterns_audit_surface_sha256_v20_2026-04-12.txt` together with `scripts/verify_audit_surface.py` to verify the shipped audit surface.
 
 ## Scope rule
 
-- `ordered-combination` remains outside the default integrated mainline.
+- `ordered-combination` remains outside the default NRR-Patterns mainline.
 - `no-position` remains appendix/package-first unless later manuscript pressure makes promotion necessary.
-- The integrated paper uses `Stage B` to make the comparison map honest, not to replace the comparison spine.
+- NRR-Patterns uses `Stage B` to make the comparison map honest, not to replace the comparison spine.
 - The current audit surface ships `no-position` as an appendix/package-first artifact but keeps `ordered-combination` demoted out of the default release surface.
 - The current release surface is auditable claim-trace packaging, not a full end-to-end rerun bundle.
 
 ## Release-surface note
 
-This v19 package map keeps the reviewer-facing comparison headline on one explicit
+This v20 package map keeps the reviewer-facing comparison headline on one explicit
 matched-run summary artifact while also exposing a compact
 provider-separated stability summary for the same surface. It also makes the
 split comparison contract, its shipped historical predecessor, and the Stage B
@@ -77,11 +77,11 @@ Stage2 Gemini paired-delta member used for the strongest Branch tail-risk
 sentence. The shipped verify path now also checks provider-separated summary
 invariants directly, so `none` negative-provider rows cannot silently ship with
 populated most-negative context fields. In addition, the current
-integrated manuscript now re-anchors the context-only Transfer citation to the
+NRR-Patterns manuscript now re-anchors the context-only Transfer citation to the
 actual `v123` manuscript title and cited-tree wording, so the fixed series-path
 reference description matches the frozen snapshot it names. The same fixed-tree
 snapshot wording contract is now also applied consistently to the Coupled
-series-path citation. The current integrated manuscript front matter now states
+series-path citation. The current NRR-Patterns manuscript front matter now states
 the fixed matched-run comparison spine separately from the selected Stage B
 honesty carry-forward, so sign-flip and non-effective regions are not presented
 as if they came from the same headline evidence role. Here, exact replication

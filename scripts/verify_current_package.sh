@@ -4,8 +4,8 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 CURRENT_DIR="$ROOT/manuscript/current"
 REPRO_DIR="$ROOT/repro"
-REPRO_MANIFEST="$REPRO_DIR/paper7_integrated_repro_checksums_sha256.txt"
-AUDIT_MANIFEST="$(find "$REPRO_DIR" -maxdepth 1 -type f -name 'paper7_integrated_audit_surface_sha256_v*.txt' | sort -V | tail -n 1)"
+REPRO_MANIFEST="$REPRO_DIR/nrr_patterns_repro_checksums_sha256.txt"
+AUDIT_MANIFEST="$(find "$REPRO_DIR" -maxdepth 1 -type f -name 'nrr_patterns_audit_surface_sha256_v*.txt' | sort -V | tail -n 1)"
 
 "$ROOT/scripts/verify_active_review_surface.sh"
 
@@ -16,16 +16,16 @@ fi
 
 cd "$ROOT"
 if [ -z "$AUDIT_MANIFEST" ]; then
-  echo "No paper7 integrated audit manifest found in $REPRO_DIR" >&2
+  echo "No NRR-Patterns audit manifest found in $REPRO_DIR" >&2
   exit 1
 fi
 python3 scripts/verify_audit_surface.py "$AUDIT_MANIFEST"
 
-LATEST_TEX="$(find "$CURRENT_DIR" -maxdepth 1 -type f -name 'paper7_integrated_manuscript_v*.tex' | sort -V | tail -n 1)"
-LATEST_COMPARISON_MANIFEST="$(find "$REPRO_DIR" -maxdepth 1 -type f -name 'paper7_integrated_comparison_claims_manifest_v*.csv' | sort -V | tail -n 1)"
-LATEST_PACKAGE_MAP="$(find "$REPRO_DIR" -maxdepth 1 -type f -name 'paper7_integrated_package_map_v*.md' | sort -V | tail -n 1)"
-LATEST_SPLIT_CONTRACT="$(find "$REPRO_DIR" -maxdepth 1 -type f -name 'paper7_split_comparison_contract_v*.md' | sort -V | tail -n 1)"
-LATEST_FIXED_PROTOCOL_NOTE="$(find "$REPRO_DIR" -maxdepth 1 -type f -name 'paper7_fixed_paired_protocol_spec_v*.md' | sort -V | tail -n 1)"
+LATEST_TEX="$(find "$CURRENT_DIR" -maxdepth 1 -type f -name 'nrr_patterns_manuscript_v*.tex' | sort -V | tail -n 1)"
+LATEST_COMPARISON_MANIFEST="$(find "$REPRO_DIR" -maxdepth 1 -type f -name 'nrr_patterns_comparison_claims_manifest_v*.csv' | sort -V | tail -n 1)"
+LATEST_PACKAGE_MAP="$(find "$REPRO_DIR" -maxdepth 1 -type f -name 'nrr_patterns_package_map_v*.md' | sort -V | tail -n 1)"
+LATEST_SPLIT_CONTRACT="$(find "$REPRO_DIR" -maxdepth 1 -type f -name 'nrr_patterns_split_comparison_contract_v*.md' | sort -V | tail -n 1)"
+LATEST_FIXED_PROTOCOL_NOTE="$(find "$REPRO_DIR" -maxdepth 1 -type f -name 'nrr_patterns_fixed_paired_protocol_spec_v*.md' | sort -V | tail -n 1)"
 
 check_repro_refs_in_audit_manifest() {
   local source_file="$1"
@@ -79,8 +79,8 @@ check_review_docs_for_omitted_refs() {
     "results/figures/"
     "manuscript/archive/"
     "LICENSE"
-    "results/analysis/paper7_allproviders_pattern_summary_robust.csv"
-    "results/analysis/paper7_allproviders_paired_deltas_merged.csv"
+    "results/analysis/nrr_patterns_allproviders_pattern_summary_robust.csv"
+    "results/analysis/nrr_patterns_allproviders_paired_deltas_merged.csv"
   )
 
   for doc in "${docs[@]}"; do

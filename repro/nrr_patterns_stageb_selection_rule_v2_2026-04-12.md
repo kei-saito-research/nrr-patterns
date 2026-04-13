@@ -1,25 +1,25 @@
-# Integrated paper7 Stage B selection rule v1
+# NRR-Patterns Stage B selection rule v2
 
 ## Purpose
 
-This file freezes the paper-local rule for what enters the integrated `paper7`
+This file freezes the paper-local rule for what enters the NRR-Patterns
 boundary-honesty layer from Stage B. It is an integration rule for this
 comparison-led manuscript, not a claim that the full Stage B program was
-originally preregistered for paper7 itself.
+originally preregistered for this manuscript line itself.
 
 ## Boundary-layer objective
 
-- The role of Stage B inside integrated `paper7` is narrow:
+- The role of Stage B inside NRR-Patterns is narrow:
   - make the comparison-side pattern map honest about provider-sensitive
     weakening, reversal, and non-effective regions
-- The role of Stage B inside integrated `paper7` is not:
+- The role of Stage B inside NRR-Patterns is not:
   - replace the main comparison spine
   - reopen the full operator-boundary paper
   - promote every Stage B diagnostic into the main text
 
 ## Selection rule
 
-Keep a Stage B artifact in the integrated manuscript only if it serves at least
+Keep a Stage B artifact in the current NRR-Patterns manuscript only if it serves at least
 one of the following paper-local honesty roles:
 
 1. It gives the minimal manuscript-facing provider-balanced carry-forward read on
@@ -40,8 +40,8 @@ central.
 - `rework_cost_tokens`
 
 These are retained because they are the smallest downstream quality/cost pair
-that can make the five-pattern comparison map honest without turning integrated
-`paper7` into a second boundary-led manuscript.
+that can make the five-pattern comparison map honest without turning
+NRR-Patterns into a second boundary-led manuscript.
 
 ## Retained Stage B artifacts
 

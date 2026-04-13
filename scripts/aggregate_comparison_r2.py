@@ -17,11 +17,11 @@ RESULTS_DIR = ROOT / "results"
 ANALYSIS_DIR = RESULTS_DIR / "analysis"
 
 ZIP_PATHS = {
-    "anthropic": RESULTS_DIR / "paper7_compare_t00_r2_anthropic.zip",
-    "openai": RESULTS_DIR / "paper7_compare_t00_r2_openai.zip",
-    "gemini": RESULTS_DIR / "paper7_compare_t00_r2_gemini.zip",
+    "anthropic": RESULTS_DIR / "nrr_patterns_compare_t00_r2_anthropic.zip",
+    "openai": RESULTS_DIR / "nrr_patterns_compare_t00_r2_openai.zip",
+    "gemini": RESULTS_DIR / "nrr_patterns_compare_t00_r2_gemini.zip",
 }
-PAIRED_MEMBER = "results_compare_t00_r2/analysis/paper7_comparison_paired.csv"
+PAIRED_MEMBER = "results_compare_t00_r2/analysis/nrr_patterns_comparison_paired.csv"
 
 
 def weighted_percent(rows: list[dict[str, str]]) -> float:
@@ -138,8 +138,8 @@ def main() -> int:
     by_provider_rows = aggregate_provider_rows(pair_rows)
     aggregated_rows = aggregate_allproviders(by_provider_rows)
 
-    by_provider_path = ANALYSIS_DIR / "paper7_comparison_summary_r2_by_provider.csv"
-    aggregated_path = ANALYSIS_DIR / "paper7_comparison_summary_r2_aggregated.csv"
+    by_provider_path = ANALYSIS_DIR / "nrr_patterns_comparison_summary_r2_by_provider.csv"
+    aggregated_path = ANALYSIS_DIR / "nrr_patterns_comparison_summary_r2_aggregated.csv"
 
     write_csv(
         by_provider_path,

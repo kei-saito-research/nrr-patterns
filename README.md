@@ -1,19 +1,6 @@
 # NRR-Patterns: Delayed-Commitment Patterns in Stateful LLM Systems
 
-This repository is the current public authority for the `NRR-Patterns` line.
-The current bounded audit surface uses `NRR-Patterns` artifact naming
-throughout the active manuscript, package, and verification paths. The current
-NRR-Patterns manuscript compares delayed-commitment patterns under a split
-comparison contract with a fixed matched-run comparison headline on two fixed
-matched `t=0.0` runs and a separated robustness member, then carries forward
-selected provider-sensitive boundary reporting to keep the resulting pattern
-map honest under explicit conditions. The shipped review ZIP audits that
-released output surface rather than serving as an independent rerun workspace.
-
-Historical note:
-- the older `nrr-principles` repository remains as a public archive for the pre-integration and local integration history
-- the standalone `nrr-boundary` repository remains as a public archive support surface
-- neither old repository should be read as a competing live mainline now that this `NRR-Patterns` authority surface exists
+This repository hosts the manuscript snapshot and reproducibility assets for the `NRR-Patterns` line. The manuscript compares delayed-commitment patterns under a split comparison contract with a fixed matched-run comparison headline on two fixed matched `t=0.0` runs and a separated robustness member, then reports provider-sensitive boundary behavior under explicit conditions.
 
 NRR is not an anti-LLM framework.
 NRR does not replace standard LLM use.
@@ -32,29 +19,29 @@ For the cross-paper map and current series links, start here:
 
 ## Current manuscript snapshot
 
-- Mainline NRR-Patterns manuscript source:
-  - `manuscript/current/nrr_patterns_manuscript_v0_33_2026-04-12.tex`
-- Mainline NRR-Patterns manuscript PDF:
-  - `manuscript/current/nrr_patterns_manuscript_v0_33_2026-04-12.pdf`
-- Mainline NRR-Patterns checksum manifest:
+- Manuscript source:
+  - `manuscript/current/nrr_patterns_manuscript_v0_36_2026-04-13.tex`
+- Manuscript PDF:
+  - `manuscript/current/nrr_patterns_manuscript_v0_36_2026-04-13.pdf`
+- Checksum manifest:
   - `manuscript/checksums_active_review_surface_sha256.txt`
-- Mainline NRR-Patterns audit-surface anchors:
+- Reproducibility anchors:
   - `repro/nrr_patterns_audit_surface_sha256_v20_2026-04-12.txt`
   - `repro/nrr_patterns_package_map_v20_2026-04-12.md`
   - `repro/nrr_patterns_split_comparison_contract_v13_2026-04-12.md`
   - `repro/nrr_patterns_stageb_selection_rule_v2_2026-04-12.md`
-- Mainline figures used by manuscript:
+- Figures used by the manuscript:
   - `manuscript/figures/fig_patterns_weighted_3runs.png`
   - `manuscript/figures/fig_r2_comparison_weighted.png`
   - `manuscript/figures/nrr_patterns_stageb_sign_flip_boundaries.png`
-- Current review ZIP audits the released matched-run output surface and nested source members rather than providing an independent rerun workspace.
-- Shipped root-level docs inside that ZIP are only `README.md` and `reproducibility.md`.
+- The bundled ZIP inspects the released matched-run output surface and nested source members rather than acting as a full rerun workspace.
+- The bundled root-level guides are `README.md` and `reproducibility.md`.
 
-## Review-package entry points
+## Snapshot entry points
 
-The current review ZIP has one active comparison contract: `repro/nrr_patterns_split_comparison_contract_v13_2026-04-12.md`. The shipped `repro/nrr_patterns_fixed_paired_protocol_spec_v8_2026-04-12.md` file is a historical provenance note only, while `repro/nrr_patterns_boundary_claims_manifest_v2_2026-04-12.csv` and `repro/nrr_patterns_repro_checksums_sha256.txt` are part of the current audit surface.
+The bundled ZIP uses `repro/nrr_patterns_split_comparison_contract_v13_2026-04-12.md` as its comparison contract. The file `repro/nrr_patterns_fixed_paired_protocol_spec_v8_2026-04-12.md` is retained as provenance for the bundled artifact set.
 
-- Review-package guide:
+- Reproducibility guide:
   - `reproducibility.md`
 - Top-level shipped summaries:
   - `results/analysis/nrr_patterns_comparison_headline_summary_v3_2026-04-12.csv`
@@ -78,7 +65,7 @@ The current review ZIP has one active comparison contract: `repro/nrr_patterns_s
   - `results/nrr_patterns_results_stage2_t03.zip::results/analysis/nrr_patterns_prod_anthropic_clean_t03_paired_deltas.csv`
   - `results/nrr_patterns_results_stage2_t03.zip::results/analysis/nrr_patterns_prod_gemini_clean_t03_paired_deltas.csv`
   - `results/nrr_patterns_results_stage2_t03.zip::results/analysis/nrr_patterns_prod_openai_clean_t03_paired_deltas.csv`
-- Shipped audit-package scripts:
+- Included scripts:
   - `./scripts/aggregate_comparison_r2.py`
   - `./scripts/build_nrr_patterns_comparison_headline_summary.py`
   - `./scripts/build_nrr_patterns_provider_separated_stability_summary.py`
@@ -88,26 +75,16 @@ The current review ZIP has one active comparison contract: `repro/nrr_patterns_s
   - `./scripts/verify_current_package.sh`
   - `./scripts/verify_provider_separated_summary.py`
   - `./scripts/verify_audit_surface.py repro/nrr_patterns_audit_surface_sha256_v20_2026-04-12.txt`
-- Review-package manifests:
+- Reproducibility manifests:
   - `repro/nrr_patterns_comparison_claims_manifest_v7_2026-04-12.csv`
   - `repro/nrr_patterns_boundary_claims_manifest_v2_2026-04-12.csv`
   - `repro/nrr_patterns_package_map_v20_2026-04-12.md`
-  - `repro/nrr_patterns_split_comparison_contract_v13_2026-04-12.md` (active comparison contract)
-  - `repro/nrr_patterns_fixed_paired_protocol_spec_v8_2026-04-12.md` (historical / superseded provenance note only)
+  - `repro/nrr_patterns_split_comparison_contract_v13_2026-04-12.md`
+  - `repro/nrr_patterns_fixed_paired_protocol_spec_v8_2026-04-12.md` (provenance note)
   - `repro/nrr_patterns_repro_checksums_sha256.txt`
   - `repro/nrr_patterns_audit_surface_sha256_v20_2026-04-12.txt`
 
-## Mainline Read
-
-- Current cross-series mainline for this repository:
-  - `NRR-Patterns`
-- Historical/source surfaces kept here but not current mainline:
-  - standalone `NRR-Principles`
-  - carried-forward `Boundary` source references consumed by the current `NRR-Patterns` line
-- Standalone sibling repository status:
-  - `nrr-boundary` remains a historical/source support surface and should not be read as a separate live mainline while `NRR-Patterns` is the active line
-
-## Shipped review-zip structure
+## Bundled ZIP structure
 
 ```text
 nrr-patterns-review-zip/

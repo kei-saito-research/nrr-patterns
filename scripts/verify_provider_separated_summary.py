@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SUMMARY_PATH = max(
-    (ROOT / "results" / "analysis").glob("paper7_provider_separated_stability_summary_v*.csv"),
+    (ROOT / "results" / "analysis").glob("nrr_patterns_provider_separated_stability_summary_v*.csv"),
     key=lambda p: p.name,
 )
 

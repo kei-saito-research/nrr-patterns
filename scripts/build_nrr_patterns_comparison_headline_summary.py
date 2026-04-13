@@ -13,18 +13,18 @@ ANALYSIS_DIR = RESULTS_DIR / "analysis"
 RUNS = [
     (
         "stage1_main",
-        RESULTS_DIR / "paper7_results_allproviders_clean.zip",
-        "results/analysis/paper7_allproviders_pattern_summary_robust_t00.csv",
+        RESULTS_DIR / "nrr_patterns_results_allproviders_clean.zip",
+        "results/analysis/nrr_patterns_allproviders_pattern_summary_robust_t00.csv",
     ),
     (
         "stage1_rep2",
-        RESULTS_DIR / "paper7_results_stage1_t00_rep2.zip",
-        "results/analysis/paper7_allproviders_pattern_summary_robust_t00.csv",
+        RESULTS_DIR / "nrr_patterns_results_stage1_t00_rep2.zip",
+        "results/analysis/nrr_patterns_allproviders_pattern_summary_robust_t00.csv",
     ),
     (
         "stage2_t03",
-        RESULTS_DIR / "paper7_results_stage2_t03.zip",
-        "results/analysis/paper7_allproviders_pattern_summary_robust_t03.csv",
+        RESULTS_DIR / "nrr_patterns_results_stage2_t03.zip",
+        "results/analysis/nrr_patterns_allproviders_pattern_summary_robust_t03.csv",
     ),
 ]
 
@@ -36,7 +36,7 @@ PATTERN_ORDER = [
     "branch",
 ]
 
-OUTPUT_PATH = ANALYSIS_DIR / "paper7_integrated_comparison_headline_summary_v2_2026-03-31.csv"
+OUTPUT_PATH = ANALYSIS_DIR / "nrr_patterns_comparison_headline_summary_v3_2026-04-12.csv"
 
 
 def read_csv_from_zip(zip_path: Path, member_path: str) -> list[dict[str, str]]:

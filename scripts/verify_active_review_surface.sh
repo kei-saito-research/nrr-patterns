@@ -14,12 +14,12 @@ done < <(find "$CURRENT_DIR" -maxdepth 1 -type f | LC_ALL=C sort)
 tex_files=()
 while IFS= read -r file; do
   tex_files+=("$file")
-done < <(find "$CURRENT_DIR" -maxdepth 1 -type f -name 'paper7_integrated_manuscript_v*.tex' | LC_ALL=C sort)
+done < <(find "$CURRENT_DIR" -maxdepth 1 -type f -name 'nrr_patterns_manuscript_v*.tex' | LC_ALL=C sort)
 
 pdf_files=()
 while IFS= read -r file; do
   pdf_files+=("$file")
-done < <(find "$CURRENT_DIR" -maxdepth 1 -type f -name 'paper7_integrated_manuscript_v*.pdf' | LC_ALL=C sort)
+done < <(find "$CURRENT_DIR" -maxdepth 1 -type f -name 'nrr_patterns_manuscript_v*.pdf' | LC_ALL=C sort)
 
 png_files=()
 while IFS= read -r file; do
