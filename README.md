@@ -20,9 +20,9 @@ For the cross-paper map and current series links, start here:
 ## Current manuscript snapshot
 
 - Manuscript source:
-  - `manuscript/current/nrr_patterns_manuscript_v0_36_2026-04-13.tex`
+  - `manuscript/current/nrr_patterns_manuscript_v0_37_2026-04-13.tex`
 - Manuscript PDF:
-  - `manuscript/current/nrr_patterns_manuscript_v0_36_2026-04-13.pdf`
+  - `manuscript/current/nrr_patterns_manuscript_v0_37_2026-04-13.pdf`
 - Checksum manifest:
   - `manuscript/checksums_active_review_surface_sha256.txt`
 - Reproducibility anchors:

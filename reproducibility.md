@@ -12,9 +12,9 @@ The package uses two evidence shapes:
 ## Current snapshot
 
 - Manuscript TeX:
-  - `manuscript/current/nrr_patterns_manuscript_v0_36_2026-04-13.tex`
+  - `manuscript/current/nrr_patterns_manuscript_v0_37_2026-04-13.tex`
 - Manuscript PDF snapshot:
-  - `manuscript/current/nrr_patterns_manuscript_v0_36_2026-04-13.pdf`
+  - `manuscript/current/nrr_patterns_manuscript_v0_37_2026-04-13.pdf`
 - Manuscript figures:
   - `manuscript/figures/fig_patterns_weighted_3runs.png`
   - `manuscript/figures/fig_r2_comparison_weighted.png`
@@ -77,7 +77,7 @@ The package uses two evidence shapes:
   - `./scripts/README.md`
 - Build the current manuscript to a temp output dir:
   - `./scripts/build_current_manuscript.sh`
-  - default output: `/tmp/nrr-patterns_current_build/nrr_patterns_manuscript_v0_36_2026-04-13.pdf`
+  - default output: `/tmp/nrr-patterns_current_build/nrr_patterns_manuscript_v0_37_2026-04-13.pdf`
 - Verify the active manuscript surface:
   - `./scripts/verify_active_review_surface.sh`
 - Verify the current package checksums:
